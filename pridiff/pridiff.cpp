@@ -62,7 +62,10 @@ int wmain(int argc, wchar_t* argv[])
 	wstring new_files_pattern, old_files_pattern;
 
 	fwprintf_s(out, L"\n PriDiff v0.2 https://github.com/WalkingCat/PriDiff\n\n");
-
+	
+	// Setting locale
+	_wsetlocale(LC_ALL, L"");
+	
 	for (int i = 1; i < argc; ++i) {
 		const wchar_t* arg = argv[i];
 		if ((arg[0] == L'-') || ((arg[0] == L'/'))) {
